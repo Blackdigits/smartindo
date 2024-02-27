@@ -1,0 +1,265 @@
+@import url('http://fonts.googleapis.com/css?family=Roboto'); 
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.bootstrap3.min.css');
+  body{  
+    font: 14px Roboto;
+  }
+     .bloom-mobile-header {
+         height: 55px;
+         width: 100vw;
+         background-color: #ff0077;
+         flex-direction: row;
+         align-items: center;
+         justify-content: space-between;
+         padding: 0;
+         position: fixed;
+         z-index: 10;
+         transition: all 0.3s;
+         display: flex;
+         top: 0;
+         left: 0;
+    }
+     .bloom-mobile-header.nav-visible div.toggle-nav i.material-icons#openNavButton {
+         transform: scale(0) rotate(720deg);
+    }
+     .bloom-mobile-header.nav-visible div.toggle-nav i.material-icons#closeNavButton {
+         transform: scale(1) rotate(0deg);
+    }
+     .bloom-mobile-header.nav-visible .nav {
+         left: 0;
+    }
+     .bloom-mobile-header.nav-visible .nav .item {
+         opacity: 1;
+    }
+     .bloom-mobile-header div.toggle-nav {
+         height: 74px;
+         width: 74px;
+         padding: 0;
+         user-select: none;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+    }
+     .bloom-mobile-header div.toggle-nav i.material-icons {
+         color: #ffffff;
+         font-size: 28px;
+         line-height: 72px;
+         cursor: pointer;
+         position: absolute;
+         transition: transform 0.3s;
+    }
+     .bloom-mobile-header div.toggle-nav i.material-icons#openNavButton {
+         transform: scale(1) rotate(0deg);
+    }
+     .bloom-mobile-header div.toggle-nav i.material-icons#closeNavButton {
+         transform: scale(0) rotate(720deg);
+    }
+     .bloom-mobile-header .nav {
+         margin: 0;
+         width: 100vw;
+         max-width: 500px;
+         height: 100vh;
+         position: absolute;
+         top: 74px;
+         left: -100vw;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: flex-start;
+         transition: left 0.3s;
+         z-index: -1;
+         background-color: #fff;
+         padding: 80px 0 0 0;
+         box-sizing: border-box;
+    }
+     .bloom-mobile-header .nav .item {
+         position: relative;
+         text-align: center;
+         width: 90%;
+         transition: width 0.3s, margin 0.3s;
+         border-bottom: 1px solid #bdbdbd;
+         opacity: 0;
+         list-style-type: none;
+    }
+     .bloom-mobile-header .nav .item a {
+         color: #202020;
+         font-size: 16px;
+         font-weight: 300;
+         line-height: 52px;
+         width: 100%;
+         text-transform: uppercase;
+         text-decoration: none;
+         cursor: pointer;
+    }
+     .bloom-mobile-header .nav .item a:hover, .bloom-mobile-header .nav .item a:focus {
+         color: #d1d1d1;
+    }
+     .bloom-mobile-header .logo {
+         box-sizing: border-box;
+         align-items: center;
+         display: flex;
+         justify-content: center;
+         line-height: 74px;
+         height: 74px;
+         font-size: 24px;
+         color: #ffffff;
+         font-weight: 400;
+         opacity: 1;
+         width: calc(100% - 180px);
+         margin-right: 0;
+         padding: 20px 0;
+         background: transparent;
+    }
+     .bloom-mobile-header .logo img {
+         height: 100%;
+    }
+     .bloom-mobile-header .search-container {
+         height: 74px;
+         width: 74px;
+         align-items: center;
+         display: flex;
+         justify-content: center;
+    }
+     .bloom-mobile-header .search-container i {
+         color: #ffffff;
+         font-size: 28px;
+         line-height: 72px;
+         cursor: pointer;
+         position: absolute;
+         transition: transform 0.3s;
+    }
+        .circle{
+            border: 1px dashed;
+            color: #000;
+            border-radius: 150px;
+            padding: 16px;
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 80px;
+        }
+        .tambah{
+            float:right; 
+            font-size: 14px;
+            padding: 3px 16px;
+            border-radius: 5px;
+            background-color: green;
+            text-decoration: none;
+            color: white; 
+        } 
+        .hapus {
+            font-size: 14px;
+            padding: 3px 16px;
+            border-radius: 5px;
+            background-color: red; 
+            color: white;
+            border: red;
+        }
+
+/* Sale.html */
+
+.button { 
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); 
+  border: none;
+  color: white; 
+  padding: 10px 18%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  border-radius:10px;   
+} 
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  z-index:99;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  height: fit-content;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  font: 16px;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+.popup .content button {
+  color:red;
+  padding: 5px 5%;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
+}
+tr.selected {
+    background-color: #337ab7 !important;
+    color: #fff !important;
+}
+tr:hover {
+    background-color: #cbf5eb;
+    color: #2da79b;
+    transition: 0.3s;
+    cursor: pointer;
+    clip-path: polygon(0% 0%, 98% 0%, 100% 50%, 98% 100%, 0% 100%);
+}
+input:read-only {
+    width: inherit;
+    background: none;
+    border: none;
+}
+.table td{  
+    line-height: 29px;
+    border-top: 1px solid lightgray;
+}
+.td {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+} 
